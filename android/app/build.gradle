@@ -39,6 +39,8 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        // Google Maps API key, read from local.properties (see README "Getting started").
+        manifestPlaceholders = [MAPS_API_KEY: localProperties.getProperty('MAPS_API_KEY', '')]
     }
 
     buildTypes {
